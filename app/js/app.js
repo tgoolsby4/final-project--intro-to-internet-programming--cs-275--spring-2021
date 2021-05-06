@@ -21,7 +21,24 @@ window.onload = () => {
             diamond.style.width = (10*size)+`px`;
         }
         else {
-            diamond.innerHTML = `even`;
+            for(let i=0; i<(2*l)+1; i+=2){
+                if(i===0 || i===2*l){
+                    diamond.innerHTML += `* `;
+                }
+                if(i<l){
+                    for(let j=0; j<i; j++){
+                        diamond.innerHTML += `* `;
+                    }
+                }
+                if(i>=l){
+                    for(let j=2*l; j>i; j--){
+                        diamond.innerHTML += `* `;
+                    }
+                }
+                diamond.innerHTML += `\n`;
+            }
+            diamond.style.width = (20*size)+`px`;
+            diamond.style.lineHeight = `100%`;
         }
     };
 
