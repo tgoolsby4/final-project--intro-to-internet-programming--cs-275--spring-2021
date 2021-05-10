@@ -46,6 +46,23 @@ window.onload = () => {
         }
     };
 
+    let move = () => {
+        if(left < (body.clientWidth - diamond.clientWidth + 6) && right === 0){
+            diamond.style.left = left+`px`;
+            left += 1;
+            if(left === (body.clientWidth - diamond.clientWidth + 6)){
+                right = 1;
+            }
+        }
+        if(left > 0 && right === 1){
+            diamond.style.left = left+`px`;
+            left -= 1;
+            if(left === 0){
+                right = 0;
+            }
+        }
+    };
+
     if(!isNaN(size) && size > 0){
         createDiamond(size);
     }
