@@ -65,6 +65,7 @@ window.onload = () => {
 
     if(!isNaN(size) && size > 0){
         createDiamond(size);
+        setInterval(move,1);
     }
     else {
         alert(`Please enter an integer value`);
