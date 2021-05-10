@@ -69,7 +69,7 @@ window.onload = () => {
         setInterval(move,1);
     }
     else {
-        alert(`Please enter an integer value`);
+        //alert(`Please enter an integer value`);
         window.location.reload();
     }
 };
