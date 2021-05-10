@@ -2,6 +2,10 @@ window.onload = () => {
     let size = window.prompt(`Enter a number for the length of your diamond!`);
     size = parseInt(size, 10);
     let diamond = document.querySelector(`#diamond-container`);
+    let body = document.querySelector(`body`);
+    let left = 0;
+    let right = 0;
+    diamond.style.left = left;
 
     let createDiamond = (l) => {
         if(l%2 !== 0){
