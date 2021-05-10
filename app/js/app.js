@@ -6,6 +6,7 @@ window.onload = () => {
     let left = 0;
     let right = 0;
     diamond.style.left = left;
+    diamond.style.top = 0+`px`;
 
     let createDiamond = (l) => {
         if(l%2 !== 0){
